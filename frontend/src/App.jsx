@@ -21,6 +21,10 @@ function App(){
 <Route path="/Stories" element={<Stories />} />
 <Route path="/Tech" element={<Tech />}/>
 <Route path="/Latest" element={<Latest />} />
+
+
+
+
   </Routes>
   </>
 }

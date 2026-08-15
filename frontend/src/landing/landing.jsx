@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {motion} from "framer-motion"
 import { FiSearch } from "react-icons/fi";
 import { useState } from "react";
+import Ideas from "../dashboard/ideas/ideas";
 
 function Landing() {
     const navigate = useNavigate();
@@ -62,23 +63,23 @@ function Landing() {
     <button onClick={gohome}>BELLWETHER</button>
   </div>
 
-  <div className="nav_item">
+  <div className="nav_item" onClick={()=>navigate("/")}>
     <button>LATEST</button>
   </div>
 
-  <div className="nav_item">
+  <div className="nav_item" onClick={()=>navigate("/Stories")}>
     <button>STORIES</button>
   </div>
 
-  <div className="nav_item">
+  <div className="nav_item" onClick={()=>navigate("/Ideas")}>
     <button>IDEAS</button>
   </div>
 
-  <div className="nav_item">
+  <div className="nav_item" onClick={()=>navigate("/Culture")}>
     <button>CULTURE</button>
   </div>
 
-  <div className="nav_item">
+  <div className="nav_item" onClick={()=>navigate("/Tech")}>
     <button>TECH</button>
   </div>
 

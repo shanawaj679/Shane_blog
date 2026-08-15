@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import {motion} from "framer-motion"
 import { FiSearch } from "react-icons/fi";
 import { useState } from "react";
-import Ideas from "../dashboard/ideas/ideas";
 
 function Landing() {
     const navigate = useNavigate();

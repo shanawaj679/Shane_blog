@@ -98,7 +98,7 @@ function Landing() {
 )}
 </motion.div>
 
-<div className="container"></div>
+<motion.div className="aarticle"></motion.div>
     </>
   );
 }

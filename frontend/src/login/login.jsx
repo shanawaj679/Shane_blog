@@ -1,3 +1,4 @@
+import "../css/login.css"
 function Login(){
     return <>
     <div> login brother</div>

@@ -63,7 +63,6 @@ html {
 .subscribe_btn {
   background: var(--accent);
   color: #ffffff;
-
   border: 1px solid var(--accent);
 }
 
@@ -244,7 +243,66 @@ html {
 }
 
 
+@media (max-width: 750px) {
 
+  .landing_header {
+    height: 15vh;
 
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 
+  .landing_grid_heading {
+    padding: 5px;
+    grid-template-columns: 3fr 1fr 1fr;
+  }
 
+  .background {
+    top: 2vh;
+    height: 7vh;
+  }
+
+  .main_header {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .header_actions {
+    gap: 8px;
+  }
+
+  .header_actions button {
+    width: 80px;
+    height: 30px;
+    font-size: 9px;
+  }
+
+  .about_blog {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+
+  .identity {
+    padding: 0 8px;
+    font-size: 0.55rem;
+  }
+
+  .nav_item button {
+    font-size: 7px;
+    letter-spacing: 0.08em;
+  }
+
+  .navbar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .search_box {
+    padding: 10px;
+  }
+
+  .search_box input {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}

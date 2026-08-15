@@ -534,13 +534,9 @@ function Register() {
     <div>
       EST. 2026
     </div>
-
-    <div>
-      © 2026 BELLWETHER — SHANAWAJ NADAF
+    <div>&copy; 2026 BELLWETHER — SHANAWAJ NADAF
     </div>
-
   </div>
-
 </footer>
   </>
 }

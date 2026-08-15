@@ -195,6 +195,53 @@ html {
 .nav_item button:active {
   transform: scale(0.9);
 }
+.search_box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top:1rem;
+  width: 100%;
+  padding: 14px 20px;
+
+  background: #001a02;
+  border: 1px solid #222;
+  border-top: none;
+
+  box-sizing: border-box;
+}
+.search_box input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 16px;
+
+  border: 1px solid #2a2a2a;
+  outline: none;
+
+  background: #0c0c0c;
+  color: #f5f5f5;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+.search_box input::placeholder {
+  color: #666;
+  letter-spacing: 0.05em;
+}
+.search_box input:focus {
+  background: #101010;
+  border-color: #555;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 6px 20px rgba(0, 0, 0, 0.3);
+}
 
 
 

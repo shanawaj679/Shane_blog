@@ -1,6 +1,8 @@
 import "../css/landing.css";
 import { useNavigate } from "react-router-dom";
 import {motion} from "framer-motion"
+import { FiSearch } from "react-icons/fi";
+import { useState } from "react";
 
 function Landing() {
     const navigate = useNavigate();
@@ -17,6 +19,8 @@ function Landing() {
       behavior:"smooth",
     })
   }
+
+  const [search,setsearch] = useState(false);
   return (
     <>
       <motion.div {...fadeup}
@@ -79,8 +83,19 @@ function Landing() {
   </div>
 
   <div className="nav_item">
-    <button>SEARCH</button>
+    <button onClick={()=> setsearch(!search)} aria-label="Search">
+    <FiSearch /> SEARCH
+  </button>
   </div>
+  {search && (
+  <div className="search_box">
+    <input
+      type="text"
+      placeholder="Search articles..."
+      autoFocus
+    />
+  </div>
+)}
 </motion.div>
 
 <div className="container"></div>

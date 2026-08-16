@@ -1,6 +1,7 @@
 import "../css/register.css";
 import { motion } from "framer-motion";
 import {useNavigate} from "react-router-dom"
+import { useState } from "react";
 
 function Register() {
     const navigate = useNavigate()
@@ -15,6 +16,14 @@ function Register() {
          behavior: "smooth",
     })
   }
+  const [whatisbellwether, setwhatisbellwether]=useState(false)
+  const [creatingaccount,setcreatingaccount]=useState(false)
+  const [infocollect,setinfocollect]=useState(false)
+  const [whyaccount,setwhyaccount]=useState(false)
+  const [deleteaccount,setdeleteaccount]=useState(false)
+  const [changepref,setchangepref]=useState(false)
+  const [unsubscribemail,setunsubscribemail]=useState(false)
+
 
   return <>
     <div className="reg_container">
@@ -386,46 +395,108 @@ function Register() {
 <div className="faq-section">
 
   <div className="faq-header">
-    <span>QUESTIONS</span>
     <h2>Frequently asked questions.</h2>
   </div>
 
   <div className="faq-list">
 
-    <button className="faq-item">
-      <span>What is Bellwether?</span>
-      <span className="faq-arrow">+</span>
-    </button>
+<button
+  className="faq-item"
+  onClick={() => setwhatisbellwether(!whatisbellwether)}
+>
+  <span>What is Bellwether?</span>
+  <span className="faq-arrow">
+    {whatisbellwether ? "-" : "+"}
+  </span>
+</button>
+{whatisbellwether && (
+  <div className="faq-answer">
+  <p>
+    Bellwether is a publication for curious minds, bringing together
 
-    <button className="faq-item">
+    thoughtful stories, ideas, culture, and technology.
+  </p>
+  <p>
+    We aim to help readers understand the world through engaging,
+    meaningful writing.
+  </p>
+</div>
+)}
+
+    <button className="faq-item" onClick={()=>setcreatingaccount(!creatingaccount)}>
       <span>Is creating an account free?</span>
       <span className="faq-arrow">+</span>
     </button>
+    {creatingaccount && (
+        <div className="faq-answer">
+            <p>
+                Yes. Creating a Bellwether account is completely free.
+            </p>
+            <p>
+             Your account simply gives you a more personal reading experience and helps you keep track of the stories and topics that matter to you.
+            </p>
+        </div>
+    )}
 
-    <button className="faq-item">
+    <button className="faq-item" onClick={()=>setinfocollect(!infocollect)}>
       <span>What information do you collect?</span>
       <span className="faq-arrow">+</span>
     </button>
+    {infocollect && (
+          <div className="faq-answer"> 
+          <p>
+            We collect only the information needed to provide and improve your Bellwether experience, such as your name, email address, reading preferences, and account activity. We do not ask for information that we don’t need.
+          </p>
+          </div>
+    )}
 
-    <button className="faq-item">
+    <button className="faq-item" onClick={()=>setwhyaccount(!whyaccount)}>
       <span>Why do I need an account?</span>
       <span className="faq-arrow">+</span>
     </button>
+    {whyaccount && (
+        <div className="faq-answer"> 
+        <p>An account gives you a personal place on Bellwether. </p>
+        <p>
+            You can save stories, keep track of what you’ve read, participate in conversations, receive relevant updates, and manage your reading preferences.
+        </p>
+        </div>
+    )}
 
-    <button className="faq-item">
+    <button className="faq-item" onClick={()=>setdeleteaccount(!deleteaccount)}>
       <span>Can I delete my account?</span>
       <span className="faq-arrow">+</span>
     </button>
+    {deleteaccount && (
+         <div className="faq-answer"> 
+         <p>Yes. You can request to delete your Bellwether account and associated personal information. </p>
+         <p>
+            Once the deletion process is completed, your account will no longer be available.
+         </p>
+         </div>
+    )}
 
-    <button className="faq-item">
+    <button className="faq-item" onClick={()=>setchangepref(!changepref)}>
       <span>Can I change my preferences?</span>
       <span className="faq-arrow">+</span>
     </button>
+    {changepref && (
+           <div className="faq-answer"> 
+           <p>Yes. You can update your reading and communication preferences at any time from your account settings. </p>
+           <p>This lets you control the types of updates and content you receive.</p>
+           </div>
+    )}
 
-    <button className="faq-item">
+    <button className="faq-item" onClick={()=>setunsubscribemail(!unsubscribemail)}>
       <span>How do I unsubscribe from emails?</span>
       <span className="faq-arrow">+</span>
     </button>
+    {unsubscribemail && (
+         <div className="faq-answer"> 
+         <p>You can unsubscribe from Bellwether emails using the Unsubscribe option included at the bottom of our emails. </p>
+         <p>You can also manage your communication preferences from your account settings.</p>
+         </div>
+    )}
 
   </div>
 </div>

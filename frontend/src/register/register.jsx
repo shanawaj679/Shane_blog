@@ -2,6 +2,7 @@ import "../css/register.css";
 import { motion } from "framer-motion";
 import {useNavigate} from "react-router-dom"
 import { useState } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
 
 function Register() {
     const navigate = useNavigate()
@@ -504,12 +505,13 @@ function Register() {
 
       </div>
     </div>
-
 <footer className="site-footer">
 
   <div className="footer-main">
 
+
     <div className="footer-brand">
+
       <div className="footer-logo">
         BELLWETHER
       </div>
@@ -524,32 +526,33 @@ function Register() {
         <span>·</span> CULTURE
         <span>·</span> TECHNOLOGY
       </div>
+
     </div>
 
 
     <div className="footer-column">
 
-      <div className="footer-title">
+      <div className="footer-title" onClick={() => navigate("/")}>
         EXPLORE
       </div>
 
-      <div className="footer-link">
+      <div className="footer-link" onClick={() => navigate("/Latest")}>
         Latest
       </div>
 
-      <div className="footer-link">
+      <div className="footer-link" onClick={() => navigate("/Stories")}>
         Stories
       </div>
 
-      <div className="footer-link">
+      <div className="footer-link" onClick={() => navigate("/Ideas")}>
         Ideas
       </div>
 
-      <div className="footer-link">
+      <div className="footer-link" onClick={() => navigate("/Culture")}>
         Culture
       </div>
 
-      <div className="footer-link">
+      <div className="footer-link" onClick={() => navigate("/Tech")}>
         Technology
       </div>
 
@@ -574,15 +577,6 @@ function Register() {
         Editorial Policy
       </div>
 
-    </div>
-
-
-    <div className="footer-column">
-
-      <div className="footer-title">
-        LEGAL
-      </div>
-
       <div className="footer-link">
         Privacy Policy
       </div>
@@ -597,17 +591,44 @@ function Register() {
 
     </div>
 
-  </div>
 
+    <div className="footer-column">
+
+      <div className="footer-title">
+        CONNECT
+      </div>
+
+      <div className="footer-link footer-social" onClick={()=>window.open("https://github.com/dashboard")}>
+        <FaGithub />
+        <span>GitHub</span>
+      </div>
+
+      <div className="footer-link footer-social" onClick={()=>window.open("https://www.linkedin.com/in/shanawaj-nadaf/")}>
+         <FaLinkedin />
+        <span>LinkedIn</span>
+      </div>
+
+      <div className="footer-link footer-social" onClick={()=>window.location.href="mailto:shanawaznadaf85@gmail.com"}>
+         <FaEnvelope />
+        <span>Email</span>
+      </div>
+
+    </div>
+
+  </div>
 
   <div className="footer-bottom">
 
     <div>
       EST. 2026
     </div>
-    <div>&copy; 2026 BELLWETHER — SHANAWAJ NADAF
+
+    <div>
+      © 2026 BELLWETHER — SHANAWAJ NADAF
     </div>
+
   </div>
+
 </footer>
   </>
 }

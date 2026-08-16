@@ -1,0 +1,574 @@
+
+
+.about-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f3ee;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.about-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    background: rgba(245, 243, 238, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #cfcac0;
+}
+
+.about-nav-inner {
+    width: min(1400px, 92%);
+    margin: auto;
+
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 32px;
+}
+
+.nav-item {
+    position: relative;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: opacity 0.25s ease;
+}
+
+.nav-item:hover {
+    opacity: 0.5;
+}
+
+.nav-item.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 1px;
+
+    background: #111;
+}
+
+
+
+.about-hero {
+    width: min(1400px, 92%);
+    margin: auto;
+
+    padding-top: 110px;
+    padding-bottom: 120px;
+
+    border-bottom: 1px solid #bdb8ae;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+.hero-title {
+    font-size: clamp(70px, 13vw, 190px);
+
+    font-weight: 900;
+    letter-spacing: -8px;
+    line-height: 0.8;
+}
+
+.hero-est {
+    margin-top: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+
+.about-section {
+    width: min(1400px, 92%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    padding: 100px 0;
+
+    border-bottom: 1px solid #bdb8ae;
+}
+
+.section-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #777;
+}
+
+.section-content {
+    max-width: 1050px;
+}
+
+.section-heading {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 50px;
+}
+
+
+
+
+.about-intro {
+    max-width: 850px;
+}
+
+.about-intro p {
+    margin: 0 0 28px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(23px, 3vw, 38px);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.about-intro p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.subsection {
+    margin-top: 110px;
+}
+
+.subsection-title {
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #aaa59b;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-left: 1px solid #aaa59b;
+    border-top: 1px solid #aaa59b;
+}
+
+.coverage-card {
+    min-height: 230px;
+
+    padding: 28px;
+
+    border-right: 1px solid #aaa59b;
+    border-bottom: 1px solid #aaa59b;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.coverage-card:hover {
+    background: #ebe8e1;
+}
+
+.coverage-number {
+    font-size: 10px;
+    color: #777;
+
+    margin-bottom: 45px;
+}
+
+.coverage-title {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.coverage-description {
+    max-width: 350px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.45;
+
+    color: #4d4a45;
+}
+
+
+
+
+.contact-intro {
+    max-width: 700px;
+}
+
+.contact-title {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(30px, 4vw, 52px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+    line-height: 1.5;
+
+    color: #555;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 70px;
+
+    border-top: 1px solid #aaa59b;
+}
+
+.contact-item {
+    padding: 28px 20px 28px 0;
+
+    border-right: 1px solid #aaa59b;
+}
+
+.contact-item:not(:first-child) {
+    padding-left: 25px;
+}
+
+.contact-item:last-child {
+    border-right: none;
+}
+
+.contact-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    color: #777;
+}
+
+.contact-email {
+    font-size: 16px;
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+
+.policy-intro {
+    max-width: 800px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(23px, 3vw, 35px);
+    line-height: 1.3;
+
+    margin-bottom: 70px;
+}
+
+.policy-grid {
+    border-top: 1px solid #aaa59b;
+}
+
+.policy-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #aaa59b;
+}
+
+.policy-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.policy-description {
+    max-width: 650px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+
+.policy-updated {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+
+    margin-bottom: 45px;
+}
+
+.large-policy-intro {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+
+    margin-bottom: 45px;
+}
+
+
+
+.accordion-list {
+    border-top: 1px solid #aaa59b;
+}
+
+.accordion-item {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #aaa59b;
+
+    padding: 0 5px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    cursor: pointer;
+
+    transition:
+        padding 0.25s ease,
+        background 0.25s ease;
+}
+
+.accordion-item:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background: #ebe8e1;
+}
+
+.accordion-item div:last-child {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+.about-footer {
+    width: min(1400px, 92%);
+    margin: auto;
+
+    padding: 90px 0 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: end;
+
+    gap: 30px;
+}
+
+.footer-brand {
+    font-size: 30px;
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.footer-tagline {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.footer-copy {
+    text-align: right;
+
+    font-size: 10px;
+
+    color: #777;
+}
+.contact-email-button {
+    border: 1px solid #aaa59b;
+    background: transparent;
+    color: #111;
+
+    padding: 14px 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.contact-email-button:hover {
+    background: #111;
+    color: #f5f3ee;
+    border-color: #111;
+}
+.policy-content {
+    max-width: 720px;
+    padding: 24px 0 10px;
+}
+
+.policy-content p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+
+    color: #555;
+}
+
+
+@media (max-width: 750px) {
+
+    .about-nav-inner {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 22px;
+    }
+
+    .about-hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero-title {
+        letter-spacing: -5px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        padding: 75px 0;
+    }
+
+    .section-number {
+        margin-bottom: 25px;
+    }
+
+    .coverage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        border-right: none;
+        border-bottom: 1px solid #aaa59b;
+        padding: 25px 0 !important;
+    }
+
+    .contact-item:last-child {
+        border-bottom: none;
+    }
+
+    .policy-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .about-footer {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .footer-copy {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .about-page {
+        overflow-x: hidden;
+    }
+
+    .about-nav-inner {
+        min-height: 55px;
+    }
+
+    .nav-item {
+        font-size: 9px;
+    }
+
+    .hero-title {
+        font-size: 65px;
+        letter-spacing: -4px;
+    }
+
+    .about-section {
+        width: 88%;
+    }
+
+    .coverage-card {
+        min-height: 200px;
+    }
+
+    .about-intro p {
+        font-size: 24px;
+    }
+
+    .policy-intro {
+        font-size: 25px;
+    }
+
+    .large-policy-intro {
+        font-size: 26px;
+    }
+}

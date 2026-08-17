@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import axios from "axios";
 
 function Register() {
   const navigate = useNavigate();
@@ -14,6 +15,32 @@ function Register() {
   const [deleteaccount, setdeleteaccount] = useState(false);
   const [changepref, setchangepref] = useState(false);
   const [unsubscribemail, setunsubscribemail] = useState(false);
+  const [message,setmessage]=useState("")
+  const [name,setname]=useState("")
+  const [email,setemail]=useState("")
+  const [password,setpassword]=useState("")
+  const [cpassword,setcpassword]=useState("")
+  const [check,setcheck]=useState("")
+
+
+  const reg_user = async()=>{
+    try{
+  const response = await axios.post("http://localhost:3000/api/register",{
+        name,
+        email,
+        password,
+        cpassword,
+        check
+    },{
+        withCredentials:true
+    })
+    const data = response.data
+    setmessage(data.message);
+    }
+    catch(err){
+        console.log(err)
+    }
+  }
 
   const fadeUp = {
     initial: { opacity: 0, y: 30 },
@@ -558,7 +585,7 @@ function Register() {
               className="agreement"
               variants={staggerItem}
             >
-              <input type="checkbox" />
+              <input type="checkbox" value={check} onClick={(e)=>setcheck("checked")}/>
 
               <span>
                 I have read and agree to the Terms of Service and
@@ -606,8 +633,12 @@ function Register() {
                   <input
                     type="text"
                     placeholder="John Doe"
+                    value={name}
+                    onChange={(e)=>setname(e.target.value)}
                   />
+                
                 </motion.div>
+             
 
                 <motion.div
                   className="form-group"
@@ -618,8 +649,12 @@ function Register() {
                   <input
                     type="email"
                     placeholder="john@email.com"
+                    value={email}
+                    onChange={(e)=>setemail(e.target.value)}
                   />
+                  
                 </motion.div>
+              
 
                 <motion.div
                   className="form-group"
@@ -630,8 +665,12 @@ function Register() {
                   <input
                     type="password"
                     placeholder="Enter your password"
+                    value={password}
+                    onChange={(e)=>setpassword(e.target.value)}
                   />
+                  
                 </motion.div>
+               
 
                 <motion.div
                   className="form-group"
@@ -642,14 +681,19 @@ function Register() {
                   <input
                     type="password"
                     placeholder="Confirm your password"
+                    value={cpassword}
+                    onChange={(e)=>setcpassword(e.target.value)}
                   />
+                 
                 </motion.div>
+               
 
                 <motion.button
                   className="register-btn"
                   variants={staggerItem}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={reg_user}
                 >
                   Create Account →
                 </motion.button>
@@ -660,11 +704,12 @@ function Register() {
                 >
                   <span>Already have an account?</span>
 
-                  <button className="signin-link">
+                  <button className="signin-link" onClick={()=>navigate("/login")}>
                     SIGN IN →
                   </button>
                 </motion.div>
               </motion.div>
+  <div>{message}</div>
             </motion.div>
           </motion.div>
 

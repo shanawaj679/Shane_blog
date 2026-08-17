@@ -476,7 +476,7 @@
 }
 .register-container {
     margin-top:1rem;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;

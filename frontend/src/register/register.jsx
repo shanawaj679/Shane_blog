@@ -36,6 +36,9 @@ function Register() {
     })
     const data = response.data
     setmessage(data.message);
+    if(response.status){
+      navigate("/Login")
+    }
     }
     catch(err){
         console.log(err)

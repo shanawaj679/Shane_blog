@@ -92,7 +92,7 @@ const log_user = async (req,res)=>{
                             <button
                                 type="button"
                                 className="forgot-password"
-                                onClick={() => navigate("/forgot-password")}
+                                onClick={() => navigate("/Forgotpassword")}
                             >
                                 Forgot password?
                             </button>

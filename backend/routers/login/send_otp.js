@@ -1,6 +1,6 @@
 import express from "express"
 import rateLimit from "express-rate-limit";
-import otp from "../../controller/otp.js"
+import otp from "../../controller/login/otp.js"
 const router = express.Router()
 const otp_limit = rateLimit({
     windowMs:5*60*1000,

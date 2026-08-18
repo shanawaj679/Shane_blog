@@ -1,7 +1,7 @@
 import express from "express"
 import db from "../../config/db.js"
 import rateLimit from "express-rate-limit"
-import login from "../../controller/login.js"
+import login from "../../controller/login/login.js"
 const router = express.Router()
 const login_limit = rateLimit({
     windowMs:5*60*1000,

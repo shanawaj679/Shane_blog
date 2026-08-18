@@ -9,6 +9,7 @@ import Stories from "./dashboard/stories/stories.jsx"
 import Tech from "./dashboard/tech/tech.jsx"
 import Latest from "./dashboard/latest/latest.jsx"
 import About from "./about/about.jsx"
+import Forgotpassword from "./forgotpassword/forgotpassword.jsx"
 
 function App(){
   return <>
@@ -23,6 +24,7 @@ function App(){
 <Route path="/Tech" element={<Tech />}/>
 <Route path="/Latest" element={<Latest />} />
 <Route path="/About" element={<About />} />
+<Route path="/Forgotpassword" element={<Forgotpassword />} />
 
 
 

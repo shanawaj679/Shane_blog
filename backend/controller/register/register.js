@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs"
-import sendTestEmail from "../services/verificationemail.js"
-import adduser from "../model/adduser.js"
-import find_user from "../model/finduser.js"
+import sendTestEmail from "../../services/verificationemail.js"
+import adduser from "../../model/adduser.js"
+import find_user from "../../model/finduser.js"
 const register = async (req,res)=>{
     try{
        const {name,email,password,cpassword,check}=req.body

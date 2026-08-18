@@ -1,6 +1,6 @@
-import send_otp from "../services/otpservices.js";
-import store_otp from "../model/storeotp.js";
-import find_user from "../model/finduser.js";
+import send_otp from "../../services/otpservices.js";
+import store_otp from "../../model/storeotp.js";
+import find_user from "../../model/finduser.js";
 
 const otp = async(req,res)=>{
     try{

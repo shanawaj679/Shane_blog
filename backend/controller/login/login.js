@@ -1,6 +1,6 @@
-import db from "../config/db.js";
-import find_user from "../model/finduser.js";
-import confirmpassword from "../model/confirmpassword.js"
+import db from "../../config/db.js";
+import find_user from "../../model/finduser.js";
+import confirmpassword from "../../model/confirmpassword.js"
 import jwt from "jsonwebtoken"
 import dotenv from "dotenv"
 dotenv.config()

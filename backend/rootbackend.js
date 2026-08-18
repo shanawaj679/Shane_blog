@@ -8,11 +8,12 @@ app.use(express.json())
 
 import register from "./routers/register.js"
 import login from "./routers/login.js"
-
+import send_otp from "./routers/send_otp.js"
 
 
 app.use("/api/register",register);
 app.use("/api/login",login)
+app.use("/api/sendotp",send_otp)
 
 
 app.listen(3000,()=>{

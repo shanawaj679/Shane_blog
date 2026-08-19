@@ -28,6 +28,11 @@ const log_user = async (req,res)=>{
    }
    catch(err){
     console.log(err)
+     setmessage(
+
+        err.response?.data?.message || "Something went wrong"
+
+    );
    }
 }
 
@@ -131,8 +136,10 @@ const log_user = async (req,res)=>{
                             Create one
                         </button>
                        
+                       
                     </div>
- <div>{message}</div>
+                     <div className="message">{message}</div>
+
                 </motion.div>
 
             </motion.main>

@@ -62,12 +62,13 @@ function Forgotpassword() {
 
             setmessage(data.message);
 
-            if (response.status >= 200 && response.status < 300) {
+            if (response.status) {
                 navigate("/Login");
             }
 
         } catch (err) {
             console.log(err);
+            
 
             setmessage(
                 err.response?.data?.message ||

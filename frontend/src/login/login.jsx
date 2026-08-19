@@ -198,7 +198,7 @@ if(data.user.role==="admin"){
                     className="admin-option dashboard-option"
                     whileHover={{ scale: 1.03, y: -2 }}
                     whileTap={{ scale: 0.97 }}
-                    onClick={() => navigate("/admin")}
+                    onClick={() => navigate("/Admin_dashboard")}
                 >
                     <div className="option-icon">⚙</div>
 

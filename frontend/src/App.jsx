@@ -10,6 +10,7 @@ import Tech from "./dashboard/tech/tech.jsx"
 import Latest from "./dashboard/latest/latest.jsx"
 import About from "./about/about.jsx"
 import Forgotpassword from "./forgotpassword/forgotpassword.jsx"
+import Admin_dashboard from "./admin/admin_dashboard.jsx"
 
 function App(){
   return <>
@@ -25,6 +26,7 @@ function App(){
 <Route path="/Latest" element={<Latest />} />
 <Route path="/About" element={<About />} />
 <Route path="/Forgotpassword" element={<Forgotpassword />} />
+<Route path="/Admin_dashboard" element={<Admin_dashboard />} />
 
 
 

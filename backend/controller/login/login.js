@@ -39,7 +39,7 @@ res.cookie("token", jwtoken, {
     sameSite: "lax",
 
 });
-                    return res.status(200).json({message:"login successful"})
+                    return res.status(200).json({message:"login successful",user})
                 }
 
                 else{

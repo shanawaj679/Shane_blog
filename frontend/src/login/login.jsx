@@ -10,6 +10,7 @@ const navigate = useNavigate();
     const [message ,setmessage]=useState("")
     const [email,setemail]=useState("")
     const [password,setpassword]=useState("")
+    const [showAdminChoice, setShowAdminChoice] = useState(false);
    
 
 const log_user = async (req,res)=>{
@@ -21,9 +22,15 @@ const log_user = async (req,res)=>{
         withCredentials:true
     })
     const data = response.data
-    setmessage(data.message)
+
+ setmessage(data.message)   
     if(response.status){
- navigate("/Latest")
+if(data.user.role==="user"){
+    navigate("/Latest")
+}
+if(data.user.role==="admin"){
+    setShowAdminChoice(!showAdminChoice)
+}
     }
    }
    catch(err){
@@ -141,6 +148,82 @@ const log_user = async (req,res)=>{
                      <div className="message">{message}</div>
 
                 </motion.div>
+
+            
+{showAdminChoice && (
+    <motion.div
+        className="admin-choice-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+    >
+        <motion.div
+            className="admin-choice"
+            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+                duration: 0.5,
+                ease: "easeOut"
+            }}
+        >
+            <div className="admin-icon">
+                <span>✦</span>
+            </div>
+
+            <h2>Welcome back, Admin</h2>
+
+            <p className="admin-subtitle">
+                You're successfully logged in. Where would you like to go?
+            </p>
+
+            <div className="admin-options">
+
+                <motion.button
+                    className="admin-option latest-option"
+                    whileHover={{ scale: 1.03, y: -2 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => navigate("/Latest")}
+                >
+                    <div className="option-icon">⌂</div>
+
+                    <div className="option-content">
+                        <strong>Continue to Bellwether</strong>
+                        <span>Explore the latest stories</span>
+                    </div>
+
+                    <span className="arrow">→</span>
+                </motion.button>
+
+                <motion.button
+                    className="admin-option dashboard-option"
+                    whileHover={{ scale: 1.03, y: -2 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={() => navigate("/admin")}
+                >
+                    <div className="option-icon">⚙</div>
+
+                    <div className="option-content">
+                        <strong>Admin Dashboard</strong>
+                        <span>Manage your publication</span>
+                    </div>
+
+                    <span className="arrow">→</span>
+                </motion.button>
+
+            </div>
+
+            <button
+                className="admin-cancel"
+                onClick={() => setShowAdminChoice(false)}
+            >
+                Stay here
+            </button>
+        </motion.div>
+    </motion.div>
+)}
+
+
+
 
             </motion.main>
 

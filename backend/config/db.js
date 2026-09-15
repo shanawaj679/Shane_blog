@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const db = mysql2.createPool({
-    host: "localhost",
-    user: "root",
-    password: process.env.mysql_password,
-    database: "bellwether"
+    host:"localhost",
+    user:"root",
+    password:process.env.mysql_password,
+    database:"bellwether"
 });
 
 db.getConnection()

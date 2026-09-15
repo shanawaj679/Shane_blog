@@ -1,0 +1,148 @@
+.admin_dashboard_container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+/* ================= HEADER ================= */
+
+.admin_dashboard_header {
+    margin-bottom: 35px;
+}
+
+.admin_dashboard_header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.admin_dashboard_header p {
+    margin-top: 8px;
+    font-size: 15px;
+    opacity: 0.65;
+}
+
+
+/* ================= STAT CARDS ================= */
+
+.admin_dashboard_stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    width: 100%;
+}
+
+
+.admin_stat_card {
+    padding: 26px;
+    min-height: 150px;
+
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 16px;
+
+    background: rgba(128, 128, 128, 0.05);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.admin_stat_card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(128, 128, 128, 0.4);
+}
+
+
+/* ================= CARD TOP ================= */
+
+.admin_stat_card_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.admin_stat_label {
+    font-size: 14px;
+    opacity: 0.65;
+}
+
+
+.admin_stat_icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(128, 128, 128, 0.25);
+
+    font-size: 14px;
+}
+
+
+/* ================= NUMBER ================= */
+
+.admin_stat_card h2 {
+    margin: 18px 0 5px;
+
+    font-size: 36px;
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+
+.admin_stat_card p {
+    margin: 0;
+
+    font-size: 13px;
+    opacity: 0.55;
+}
+
+
+/* ================= MESSAGE ================= */
+
+.admin_dashboard_message {
+    margin-top: 25px;
+
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .admin_dashboard_stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .admin_dashboard_container {
+        padding: 25px 18px;
+    }
+
+    .admin_dashboard_header h1 {
+        font-size: 26px;
+    }
+
+    .admin_stat_card h2 {
+        font-size: 30px;
+    }
+
+}

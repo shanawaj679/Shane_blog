@@ -1,9 +1,5 @@
 
 import get_admin_data from "../../model/getadmindata.js"
-
-
-
-
 const getadmindata = async(req,res)=>{
 try {
 
